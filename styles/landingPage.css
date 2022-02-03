@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital@1&family=Oswald:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital@1&display=swap');
+*
+{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+.container {
+    background: rgb(99, 187, 246);
+    /* min-height: 100vh; */
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+}
+
+.header {
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    background: #fff;
+    box-shadow: 4px 4px 10px #000;
+}
+
+.navbar li {
+    list-style: none;
+    display: inline-block;
+}
+
+.navbar li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 1.2rem;
+    padding: 20px;
+    border-radius: 10px;
+    /* background: #000; */
+    transition: 0.5s;
+}
+
+.navbar li a:hover {
+    box-shadow: 10px 10px 20px #000;
+}
+
+.slider_container {
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+}
+
+.slider__image{
+    width: 500px;
+    height: 350px;
+    border-radius: 50px;
+}
+
+.btn {
+    transition: 0.6s;
+    cursor: pointer;
+}
+.btn__left {
+    
+    transform: rotate(90deg);
+}
+
+
+.btn__right {
+    transform: rotate(-90deg);
+}
+
+.grid {
+    background: #fff;
+    border-radius: 5px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.grid__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 10px;
+    margin-top: 100px;
+}
+
+
+.grid__title, 
+.grid__content {
+    padding: 10px 20px;
+    font-family: "Oswald";
+}
+
+.grid__content {
+    font-weight: 500;
+}
+
+.grid__list {
+    list-style: none;
+}
+
+.grid__list li {
+    font-family: "Oswald";
+    font-weight: 500;
+}
+
+.grid__list li::before{
+    content: "-";
+    padding-right: 5px;
+}
+
+#about {
+    background: #fff;
+}
+
+#about {
+    margin-top: 10px;
+}
+#about .about__title {
+    text-align: center;
+    font-family: "Old Standard TT";
+    text-transform: uppercase;
+    font-family: 2rem;
+    padding-top: 50px;
+}
+.about__container {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    justify-items: center;
+    margin-top: 100px;
+}
+
+.about__grid .about__item div img {
+    border-radius: 50%;
+}
+.about__grid .about__item h3 {
+    font-family: "Oswald";
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.about__item {
+    text-align: center;
+}
+
+.about__item p{
+    font-family: "Merriweather";
+    padding: 10px 20px;
+    line-height: 2;
+}
+
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer__contact {
+    margin-top: 20px;
+}
+
+.footer__contact img {
+    filter: invert(0)brightness(0);
+    padding: 10px;
+}
+
