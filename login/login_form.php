@@ -15,8 +15,9 @@ if(isset($_POST['login'])) {
         $count = $stmt->rowCount();
         $row = $stmt->fetch(PDO::FETCH_ASSOC);
         if($count > 0 && !empty($row)) {
-            $msg = "Đăng nhập thành công";
+            // $msg = "Đăng nhập thành công";
             $_SESSION['username'] = $username;
+            header("location: ../patient/dashboard_patient.php");
         } else {
             $error = "Incorrect username or password!!";
         }
