@@ -1,28 +1,16 @@
-const ykienBtn = document.querySelector(".ykien_btn");
+const ykien = document.querySelector(".ykien");
+const show_menu__more = document.querySelector(".sidebar__menu-more");
 
-
-const ykienList = document.querySelector(".ykien_list");
-
-const icon_arrow = document.querySelector(".icon_arrow");
-
-ykienBtn.addEventListener("click", function() {
-    ykienList.classList.toggle("ykien_show");
-    icon_arrow.classList.toggle("rotate");
+ykien.addEventListener("click", function() {
+    show_menu__more.classList.toggle("show__menu-more");
 });
 
-
-// select all li in ul
-// jquery
-$('nav ul li').click(function() {
-    // console.log($(this));
-    $(this).addClass("active").siblings().removeClass("active");
-}); 
-
-//menu btn
-
-const menuBtn = document.querySelector(".btn");
+const btn__sidebar = document.querySelector(".btn__sidebar");
+//di chuyển sidebar
 const sidebar = document.querySelector(".sidebar");
-menuBtn.addEventListener("click", function() {
-   menuBtn.classList.toggle("click"); 
-   sidebar.classList.toggle("sidebar_show");
+
+
+btn__sidebar.addEventListener("click", function() {
+    btn__sidebar.classList.toggle("click");
+    sidebar.classList.toggle("sidebar__move");
 });
