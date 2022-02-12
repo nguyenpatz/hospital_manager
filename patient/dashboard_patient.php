@@ -31,7 +31,11 @@ if(!empty($_SESSION['username'])) {
     <div class="container">
         <div class="container__header">
             <nav class="sidebar">
-                <div class="text"><?php echo $username;?></div>
+                <div class="text">
+                    <span><img src="../images/user.svg" alt=""></span>
+                    <?php echo $username;?>
+                    
+                </div>
                 <ul class="sidebar__menu">
                     <li>
                         <a href="#">Trang chủ</a>
@@ -53,6 +57,9 @@ if(!empty($_SESSION['username'])) {
                         <a href="#">Lịch sử</a>
                     </li>
                 </ul>
+                <div class="logout__container">
+                <a href="../login/logout_form.php" class="fa-solid fa-arrow-right-from-bracket icon__logout"></a>
+                </div>
             </nav>
 
             <button class="btn__sidebar">

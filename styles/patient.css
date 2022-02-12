@@ -45,7 +45,7 @@
     height: 100%;
     position: fixed;
     display: grid;
-    grid-template-rows: 50px 1fr;
+    grid-template-rows: 100px 1fr auto;
     transition: 0.5s;
     transform: translateX(-250px);
 }
@@ -59,6 +59,15 @@
     font-size: 1.7rem;
     text-transform: uppercase;
     color: #fff;
+}
+
+.text span {
+    background: #fff;
+    display: inline-block;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    text-align: center;
 }
 
 .sidebar__menu {
@@ -81,4 +90,25 @@
 .sidebar__menu li .sidebar__menu-more.show__menu-more {
     display: block;
     
+}
+
+.logout__container {
+    justify-self: center;
+    transition: .4s;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.icon__logout {
+    color: #fff;
+    font-size: 1.3rem;
+    text-decoration: none;
+}
+
+.logout__container:hover{
+    background: #ffbc00;
 }
