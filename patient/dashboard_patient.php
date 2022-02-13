@@ -31,11 +31,12 @@ if(!empty($_SESSION['username'])) {
     <div class="container">
         <div class="container__header">
             <nav class="sidebar">
+
                 <div class="text">
                     <span><img src="../images/user.svg" alt=""></span>
                     <?php echo $username;?>
-                    
                 </div>
+
                 <ul class="sidebar__menu">
                     <li>
                         <a href="#">Trang chủ</a>
@@ -46,8 +47,8 @@ if(!empty($_SESSION['username'])) {
                         </a>
 
                         <ul class="sidebar__menu-more">
-                            <li><a href="#">Thêm mới</a></li>
-                            <li><a href="#">Phiếu đánh giá</a></li>
+                            <li><a href="../patient/new_status.php" target="iframe_a">Thêm mới</a></li>
+                            <li><a href="../patient/new_feedback.php" target="iframe_a">Phiếu đánh giá</a></li>
                         </ul>
                     </li>
                     <li>
@@ -57,15 +58,26 @@ if(!empty($_SESSION['username'])) {
                         <a href="#">Lịch sử</a>
                     </li>
                 </ul>
+
                 <div class="logout__container">
-                <a href="../login/logout_form.php" class="fa-solid fa-arrow-right-from-bracket icon__logout"></a>
+                    <a href="../login/logout_form.php" class="fa-solid fa-arrow-right-from-bracket icon__logout"></a>
+                    <a class="fa-solid fa-x close__btn"></a>
                 </div>
+                
             </nav>
+
+            
 
             <button class="btn__sidebar">
                 <i class="fa-solid fa-bars icon__menu"></i>
             </button>
+
         </div>
+
+        <div class="main">
+            <iframe class="main__display" name="iframe_a" src="" frameborder="0"></iframe>
+        </div>
+        
     </div>
     <script src="../app/menu_patient.js"></script>
     

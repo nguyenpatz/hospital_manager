@@ -28,12 +28,15 @@ if(isset($_POST['register'])) {
             echo 'alert("Mật khẩu không trùng khớp!")';
          echo '</script>';
         } else {
-            $insert = "INSERT INTO account(username, password)
-            VALUES (:username, :password)";
+            $insert = "INSERT INTO account(username, password, name, address, phone_number)
+            VALUES (:username, :password, :name, :address, :phone_number)";
 
             $data = [
                 "username" => $username,
-                "password" => $password
+                "password" => $password,
+                "name" => $_POST["name"],
+                "address" => $_POST["addres"],
+                "phone_number" => $_POST["phone_number"],
             ];
 
             $stmt = $pdo->prepare($insert);
@@ -77,9 +80,13 @@ if(isset($_POST['register'])) {
                     //     echo "<span>".$msg."</span>";
                     // }
                ?>
-               <input type="text" name="username" required placeholder="Tài khoản" class="input username">
-               <input type="password" name="password" required placeholder="Mật khẩu" class="input password">
-               <input type="password" name="cpassword" required placeholder="Nhập lại mật khẩu" class="input password cpassword">
+               <input type="text" name="username" required placeholder="Tài khoản" class="input_field username">
+               <input type="password" name="password" required placeholder="Mật khẩu" class="input_field password">
+               <input type="password" name="cpassword" required placeholder="Nhập lại mật khẩu" class="input_field password cpassword">
+               <input type="text" name="name" required placeholder="Nhập họ tên người dùng" class="input_field password cpassword">
+               <input type="text" name="addres" required placeholder="Nhập địa chỉ" class="input_field password cpassword">
+               <input type="text" name="phone_number" required placeholder="Nhập số điện thoại" class="input_field password cpassword">
+
                <div class="btn">
                     <input type="submit" name="register" class="btn__login" value="Đăng ký">
                     <a href="./login_form.php" class="register">Đăng nhập</a>
