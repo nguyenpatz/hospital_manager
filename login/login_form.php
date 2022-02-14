@@ -17,9 +17,11 @@ if(isset($_POST['login'])) {
         if($count > 0 && !empty($row)) {
             // $msg = "Đăng nhập thành công";
             $_SESSION['username'] = $username;
+            $_SESSION['id_username'] = $row['id'];
             header("location: ../patient/dashboard_patient.php");
         } else {
             $error = "Incorrect username or password!!";
+            session_destroy();
         }
     }
     
