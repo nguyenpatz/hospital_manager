@@ -43,31 +43,12 @@ if(!empty($_SESSION['username'])) {
     <?php 
 
         if(isset($_POST['submit']) && ($_POST['submit'])) {
-            // $insert = "INSERT INTO status(content, benhnhan_id)
-            // VALUES(:content, :benhnhan_id)";
-    
-            // $data = [
-            //     "content" => $_POST['content'],
-            //     "benhnhan_id" => $id
-            // ];
-    
-            // $stmt = $pdo->prepare($insert);
-    
-            // if($stmt->execute($data)) {
-            //     echo '<script language="javascript">';
-            //     echo 'alert("Successful")';
-            //     echo '</script>';
-            // } else {
-            //     echo '<script language="javascript">';
-            //     echo 'alert("Failed!")';
-            //     echo '</script>';
-            // }
                 $insert = "INSERT INTO status(content, benhnhan_id)
                 VALUES (:content, :benhnhan_id)";
     
                 $data = [
                     "content" => $_POST['content'],
-                    "benhnhan_id" => $id_user,
+                    "benhnhan_id" => $id_user
                 ];
     
                 $stmt = $pdo->prepare($insert);
